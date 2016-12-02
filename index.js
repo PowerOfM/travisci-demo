@@ -1,7 +1,7 @@
 var assert = require('assert')
 var http = require('http');
  
-var server = http.createServer(function (req, res) {
+var server = http.createServer(function(req, res) {
   if (req.headers['content-type'] == 'application/json') {
     res.writeHead(403, {'Content-Type': 'application/json'})
     res.end(JSON.stringify({ error: "Our api is off limits!" }));
